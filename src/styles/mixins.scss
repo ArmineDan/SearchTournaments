@@ -1,0 +1,22 @@
+@import "fonts.scss";
+@import "colors";
+
+@mixin font(){
+  font-family:Roboto-Regular;
+}
+@mixin text($font-size:18px,$font-weight:300){
+  @include font;
+  font-size:$font-size;
+  font-weight:$font-weight;
+}
+
+@mixin text-title($fontSize, $lineHeight, $color, $weight) {
+  font-family: Roboto, sans-serif;
+  font-size: $fontSize;
+  font-weight: $weight;
+  line-height: $lineHeight;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  color: $color;
+}

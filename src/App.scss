@@ -1,0 +1,40 @@
+@import 'styles/mixins';
+
+body {
+  @include font;
+  margin: 0;
+  padding:0;
+  .main {
+    text-align: center;
+  }
+  .header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+
+  }
+
+}
+
+ul{
+  padding: 2px;
+}
+li{
+  font-weight: 700;
+  padding: 12px;
+  border-bottom: 1px solid #dee2e6;
+  list-style-type: none;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+
+

@@ -1,0 +1,66 @@
+@import '../../styles/mixins';
+@import '../../styles/responsive-mixin';
+
+.check-list {
+  background-color: $white;
+  min-height: 500px;
+  width: 17px;
+  position: absolute;
+  top: 12%;
+  right: 0;
+  transition: width .2s cubic-bezier(0.55, 0.06, 0.68, 0.19);;
+  opacity: 1;
+  .check-list-title {
+    transform: rotate(270deg) translateX(-10px);
+    width: max-content;
+    width: -moz-max-content;
+    position: absolute;
+    top: 50%;
+    right: -70px;
+    font-size: 1.2em;
+    color: $pink;
+    letter-spacing: 5px;
+    &.hide {
+      transform: rotate(0deg) translateX(-10px);
+      width: max-content;
+      position: absolute;
+      top: 102%;
+      right: 172px;
+      font-size: 1.2em;
+      color: $pink;
+      letter-spacing: 5px;
+      width: -moz-max-content;
+      @include breakpoint(xs) {
+        right:48px;
+        font-size: 1em;
+      }
+    }
+    &:before {
+      content: "";
+      width: 44px;
+      height: 2px;
+      position: absolute;
+      background-color: $pink;
+      left: 104%;
+      top: 14px;
+      @include breakpoint(xs) {
+        width:31px;
+        top:10px;
+      }
+    }
+    @include breakpoint(xs) {
+      font-size: 1em;
+      right:-61px;
+    }
+  }
+  &.small {
+    width: 17px;
+  }
+  &.big {
+    width: 440px;
+    @include breakpoint(xs) {
+      width: 300px
+    }
+  }
+
+}
